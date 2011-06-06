@@ -1,0 +1,16 @@
+apply from: "../oddnut/repositories.gradle"
+apply from: "../oddnut/osgi.gradle"
+
+version = "1.0.0"
+
+jar {
+	manifest {
+		setName			"Events"
+		symbolicName =	"us.fogel.events"
+		vendor =		"David Fogel"
+		description =	"Event source utility"
+		version =		project.version
+		
+		instruction "Export-Package", "us.fogel.events;version=$version"
+	}
+}
